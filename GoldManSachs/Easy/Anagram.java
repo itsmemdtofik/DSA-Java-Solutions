@@ -1,3 +1,8 @@
+/**
+ * !Anagagram String
+ * Question: Check whether a given string is anagram or not.
+ */
+
 package GoldManSachs.Easy;
 
 import java.util.Arrays;
