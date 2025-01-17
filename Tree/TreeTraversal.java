@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BinaryTreeUsingLinkedList {
+public class TreeTraversal {
 	static class Node {
 		int data;
 		Node left;
@@ -15,6 +15,7 @@ public class BinaryTreeUsingLinkedList {
 
 	// Method to create the binary tree
 	public static Node Create() {
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		Node root = null;
 		System.out.print("\nEnter the data: ");

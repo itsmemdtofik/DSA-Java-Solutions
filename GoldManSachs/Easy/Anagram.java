@@ -76,24 +76,24 @@ public class Anagram {
         }
 
         // Create a frequency map for the first string
-        HashMap<Character, Integer> charCountMap = new HashMap<>();
-        for (char c : str1.toCharArray()) {
-            charCountMap.put(c, charCountMap.getOrDefault(c, 0) + 1);
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < str1.length(); i++) {
+            char ch = str1.charAt(i);
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
+
 
         // Reduce the frequency map using the second string
-        for (char c : str2.toCharArray()) {
-            if (!charCountMap.containsKey(c)) {
+        for (int i = 0; i < str2.length(); i++) {
+            char ch = str2.charAt(i);
+            if (!map.containsKey(ch) || map.get(ch) == 0) {
                 return false;
             }
-            charCountMap.put(c, charCountMap.get(c) - 1);
-            if (charCountMap.get(c) == 0) {
-                charCountMap.remove(c);
-            }
+            map.put(ch, map.get(ch) - 1);
         }
 
-        // If the map is empty, the strings are anagrams
-        return charCountMap.isEmpty();
+        return true;        
+    
     }
 
     public static void main(String[] args) {

@@ -1,3 +1,20 @@
+/**
+ * !Stack:
+ * A stack is a linear data structure that follows the Last In, First Out (LIFO) principle. 
+ * This means that the last element added to the stack is the first one to be removed.
+ * 
+ * ? Operations on a Stack:
+ * * 1. Push(): Add an item to the top of stack.
+ * * 2. Pop(): Remove an item from the top of stack.
+ * * 3. Peek(): Returns the top without removing it.
+ * * 4. isEmpty(): Check is stack is empty or not.
+ * * 5. size(): Returns the number of elements in the stack.
+ * 
+ * TODO: Real world example: 1.Browser History, 2.Undo Functions in text editor.
+ * 
+ * @param Application: Depth First Search in graphs.
+ */
+
 import java.util.Scanner;
 
 public class StackUsingArray {

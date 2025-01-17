@@ -53,54 +53,58 @@ class QuickSortClass {
     }
 
     public static void runTestCases() {
-        List<int[]> testCases = new ArrayList<>();
+    List<int[]> testCases = new ArrayList<>();
 
-        // Adding complex test cases
-        testCases.add(new int[] { 2, 7, 1, 15, 5, 20, 40 }); // Empty array
-        testCases.add(new int[] { 1 }); // Single element
-        testCases.add(new int[] { 2, 1 }); // Two elements unsorted
-        testCases.add(new int[] { 1, 2 }); // Two elements sorted
-        testCases.add(new int[] { 10, 16, 8, 12, 15, 6, 3, 9, 5, 100 }); // Random unsorted array
-        testCases.add(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 }); // Already sorted array
-        testCases.add(new int[] { 8, 7, 6, 5, 4, 3, 2, 1 }); // Reverse sorted array
-        testCases.add(new int[] { 4, 2, 2, 8, 3, 3, 1 }); // Array with duplicates
+    // Adding complex test cases
+    testCases.add(new int[] { 2, 7, 1, 15, 5, 20, 40 }); // Random unsorted array
+    testCases.add(new int[] { 1 }); // Single element
+    testCases.add(new int[] { 2, 1 }); // Two elements unsorted
+    testCases.add(new int[] { 1, 2 }); // Two elements sorted
+    testCases.add(new int[] { 10, 16, 8, 12, 15, 6, 3, 9, 5, 100 }); // Random unsorted array
+    testCases.add(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 }); // Already sorted array
+    testCases.add(new int[] { 8, 7, 6, 5, 4, 3, 2, 1 }); // Reverse sorted array
+    testCases.add(new int[] { 4, 2, 2, 8, 3, 3, 1 }); // Array with duplicates
 
-        // Generating additional complex test cases dynamically
-        for (int i = 0; i < 92; i++) {
-            int size = (int) (Math.random() * 100) + 10; // Random size between 10 and 100
-            int[] randomArray = new int[size];
-            for (int j = 0; j < size; j++) {
-                randomArray[j] = (int) (Math.random() * 1000) - 500; // Random numbers between -500 and 499
-            }
-            testCases.add(randomArray);
+    // Generating additional complex test cases dynamically
+    for (int i = 0; i < 92; i++) {
+        int size = (int) (Math.random() * 100) + 10; // Random size between 10 and 100
+        int[] randomArray = new int[size];
+        for (int j = 0; j < size; j++) {
+            randomArray[j] = (int) (Math.random() * 1000) - 500; // Random numbers between -500 and 499
         }
+        testCases.add(randomArray);
+    }
 
-        // Running all test cases
-        int testCaseNumber = 1;
-        for (int[] testCase : testCases) {
-            System.out.println("Test Case " + testCaseNumber + ":");
-            System.out.println("Input: " + Arrays.toString(testCase));
-            int[] sorted = QuickSortClass._f_QuickSort(testCase.clone(), 0, testCase.length - 1);
-            System.out.println("Output: " + Arrays.toString(sorted));
+    boolean allTestsPassed = true; // Track if all tests pass
 
-            // Validate if the output is sorted
-            if (isSorted(sorted)) {
-                System.out.println("Result: Pass\n");
-            } else {
-                System.out.println("Result: Fail\n");
-            }
+    // Running all test cases
+    for (int[] testCase : testCases) {
+        int[] sorted = QuickSortClass._f_QuickSort(testCase.clone(), 0, testCase.length - 1);
 
-            testCaseNumber++;
+        // Validate if the output is sorted
+        if (!isSorted(sorted)) {
+            allTestsPassed = false;
+            System.out.println("Some test case failed: " + Arrays.toString(testCase)); // Print the failing test case
         }
     }
 
-    public static boolean isSorted(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i] > arr[i + 1])
-                return false;
-        }
-        return true;
+    // After all test cases are processed, print the result
+    if (allTestsPassed) {
+        System.out.println("All test cases passed!");
+    } else {
+        System.out.println("Some test cases failed.");
     }
+}
+
+public static boolean isSorted(int[] arr) {
+    for (int i = 0; i < arr.length - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
 
 }
 

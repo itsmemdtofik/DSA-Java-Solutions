@@ -41,15 +41,19 @@ class StringPyrmid {
 	public static void pyramid4(String string){
 
 		string = string.toLowerCase();
+		int count = 0;
 		for(int i = 1; i <= string.length(); i++){
 			for(int j = 1; j <= i; j++){
-				System.out.print(" ");
+				count++;
+				System.out.print("*");
 			}
 			for(int k = string.length(); k >= i; k--){
 				System.out.print(string.charAt(k - 1));
 			}
 			System.out.println();
 		}
+
+		System.out.println("The space : " + count);
 	}
 	public static void main(String[] args) {
 		try (Scanner scanner = new Scanner(System.in)) {

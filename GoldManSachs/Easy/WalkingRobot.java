@@ -1,3 +1,14 @@
+/**
+ * !Walking Rebot:
+ * 
+ * Instructions:Implement the walk method. this method takes in a string path 
+ * where each character in the string corresponds to a potential movements of the robot.
+ * the robot can move up, down, left and right represented by the 
+ * character 'U','D','L' and 'R' respectively. All other character may be ignored. 
+ * Assume the robot's initial position is at (0,0). 
+ * The output of this method is the robot's final x and y cordinates relative 
+ * to the initial position.
+ */
 package GoldManSachs.Easy;
 
 import java.util.Arrays;

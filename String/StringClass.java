@@ -173,10 +173,6 @@ public class StringClass {
         List<Character> consonant = new ArrayList<Character>();
         char ch[] = str.toCharArray();
 
-
-        wovels = new ArrayList<Character>();
-        consonant = new ArrayList<Character>();
-
         for(int i = 0; i < str.length(); i++){
             if(ch[i] >= 'a' && ch[i] <= 'z'){
                 if(checkWovel(ch[i])){

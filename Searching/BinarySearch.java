@@ -42,8 +42,7 @@ public class BinarySearch {
                 }
             }
             if (count > 0) {
-                System.out
-                        .println("Item is found : " + itemSearch + "\tAt location : " + mid + "\tAnd count is : " + count);
+                System.out.println("Item is found : " + itemSearch + "\tAt location : " + mid + "\tAnd count is : " + count);
             } else {
                 System.out.println("Item is not present in array : ");
             }

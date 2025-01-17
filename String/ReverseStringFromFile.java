@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ReverseStringFromFile {
     public static void main(String[] args) throws IOException {
-        File file = new File("file1.java");
+        File file = new File("/Users/itsmemdtofik/Downloads/DSA-Java-Solutions/String/file1.java");
         Scanner scanner = new Scanner(file);
         String string = "";
         if (file.exists()) {
