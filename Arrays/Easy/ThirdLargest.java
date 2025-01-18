@@ -70,13 +70,16 @@ public class ThirdLargest {
 
         try {
             int[][] testArrays = {
-                    {}, // Edge case: empty array
-                    { 5 }, // Edge case: single element array
-                    { 5, 5 }, // Case: both elements are the same
-                    { 1, 2, 3, 4, 5 }, // Normal case: distinct elements
-                    { 10, 5, 2, 10, 5 }, // Case: some duplicate elements
-                    { 2, 2, 2, 2, 2 } // Case: all elements are the same
-            };
+                {}, // Edge case: empty array
+                { 5 }, // Edge case: single element array
+                { 5, 5 }, // Case: both elements are the same
+                { 1, 2, 3, 4, 5 }, // Normal case: distinct elements
+                { 10, 5, 2, 10, 5 }, // Case: some duplicate elements
+                { 2, 2, 2, 2, 2 }, // Case: all elements are the same
+                { 1, -4, 3, -6, 7, 0 }, // containing negative elements
+                { 10, 3, 5, 6, 20 },
+                { -10, -3, -5, -6, -20 }// containing negative elements
+        };
 
             for (int[] arr : testArrays) {
                 Integer result = thirdLarge(arr);

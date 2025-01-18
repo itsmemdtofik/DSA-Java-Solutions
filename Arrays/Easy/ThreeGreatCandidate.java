@@ -73,7 +73,7 @@ public class ThreeGreatCandidate {
             for (int[] arr : testArrays) {
                 int result = productOfTriplet(arr);
                 System.out.println(
-                        "Array: " + Arrays.toString(arr) + " => Second Largest: " + (result == 0 ? "None" : result));
+                        "Array: " + Arrays.toString(arr) + " => Product Of Triplet is: " + (result == 0 ? "None" : result));
             }
         } catch (Exception e) {
             e.printStackTrace();

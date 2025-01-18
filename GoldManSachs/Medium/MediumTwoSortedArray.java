@@ -46,8 +46,8 @@ public class MediumTwoSortedArray {
 
     public static void main(String[] args) {
 
-        int[] nums1 = { 1,1, 3 };
-        int[] nums2 = { 2,2,4 };
+        int[] nums1 = { 1,2, 2 };
+        int[] nums2 = { 3,4,4 };
 
         double median = findMedianSortedArrays(nums1, nums2);
         System.out.println("The median is: " + median);
