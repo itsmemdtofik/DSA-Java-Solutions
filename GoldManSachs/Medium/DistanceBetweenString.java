@@ -26,6 +26,12 @@
 
 package GoldManSachs.Medium;
 
+/**
+ * If both string is having same length then we apply this method.
+ * For example: str1 = "silent" and str2 = "listen".
+ * If they are same then we use HammingDistance.
+ * Here they are same then we will apply this.
+ */
 public class DistanceBetweenString {
 
     public static class HammingDistance {
@@ -51,6 +57,12 @@ public class DistanceBetweenString {
 
     }
 
+    /**
+     * If both string is not having same length then we apply this method.
+     * For example: str1 = "ab" and str2 = "abc".
+     * If they are not same then we use LevenshteinDistance.
+     * Here they are not same then we apply this method.
+     */
     public static class LevenshteinDistance {
         public static int findDistance(String str1, String str2) {
             // Step 1: Get lengths of both strings

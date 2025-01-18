@@ -45,7 +45,7 @@ public class PrefixSearch {
 
         // Split the document into words using space as the delimiter
         document = document.trim();
-        String[] words = document.split("\\s+");
+        String[] words = document.split(" ");
 
         int position = 0; // Keeps track of the position of each word in the document
         for (String word : words) {

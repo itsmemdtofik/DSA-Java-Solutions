@@ -133,7 +133,7 @@ public class LargestWordMatch {
         // Example 1
         String input1 = "eot";
         List<String> result1 = findLargestWords(dictionary, input1);
-        System.out.println("Input: " + input1 + ", Output: " + result1);
+        System.out.println("Input eot: " + input1 + ", Output: " + result1);
 
         // Example 2
         String input2 = "ogtdes";

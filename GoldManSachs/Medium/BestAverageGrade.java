@@ -25,8 +25,7 @@
  * bobby: [87] → Average = 87
  * b: [100, 64] → Average = (100 + 64) / 2 = 82
  * c: [22] → Average = 22
- * Maximum average: 87.
- * 
+ * Maximum average: 87.hdfgh
  * *Over All time complexity
  * O(n)
  */

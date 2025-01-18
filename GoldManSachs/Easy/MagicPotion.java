@@ -19,7 +19,7 @@ public class MagicPotion {
             count++;
             i++;
         }
-        System.out.println(sb.toString());
+        System.out.print(sb.toString() + " ");
         return count;
 
     }

@@ -33,7 +33,6 @@ public class Anagram {
         return Arrays.equals(arr1, arr2);
         
     }
-    
     // Optimized method to check if two strings are anagrams using frequency count
     public static boolean areAnagrams(String str1, String str2) {
         // If the lengths of the strings are different, they cannot be anagrams

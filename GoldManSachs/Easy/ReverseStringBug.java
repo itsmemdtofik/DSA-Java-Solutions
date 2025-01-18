@@ -35,7 +35,7 @@ public class ReverseStringBug {
             right--;
         }
 
-        // Build the output in the desired format
+        // Build the output in the desired format.
         StringBuilder addDoubleComma = new StringBuilder();
         for(int i = 0; i < arr.length; i++){
             addDoubleComma.append("\"").append(arr[i]).append("\"");

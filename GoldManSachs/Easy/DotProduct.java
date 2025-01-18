@@ -15,6 +15,7 @@ public class DotProduct {
         }
         return dotProduct;
 	}
+
     public static void main(String[] args) {
     	
         System.out.println("The dot product of this array {1,2,3} and {4,5,6} is : " + dotProduct(new int[]{1,2,3}, new int[]{4,5,6}));
