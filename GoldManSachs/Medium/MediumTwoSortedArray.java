@@ -31,7 +31,6 @@ public class MediumTwoSortedArray {
 
         return merged;
     }
-
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
         int merged[] = mergeArray(nums1, nums2);

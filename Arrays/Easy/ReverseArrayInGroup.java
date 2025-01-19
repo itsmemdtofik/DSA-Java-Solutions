@@ -35,10 +35,10 @@ public class ReverseArrayInGroup {
             return arr;
         }
 
-        for (int i = 0; i < arr.length; i += K) {
+        for (int start = 0; start < arr.length; start += K) {
 
-            int left = i;
-            int right = Math.min(i + K - 1, arr.length - 1);
+            int left = start;
+            int right = Math.min(start + K - 1, arr.length - 1);
 
             while (left < right) {
                 int temp = arr[left];
@@ -77,7 +77,7 @@ public class ReverseArrayInGroup {
     public static void main(String[] args) {
 
         int K = 3;
-        int arr[] = { 1,2,2, 3, 4, 5, 6, 7, 8 };
+        int arr[] = { 1,2, 3, 4, 5, 6, 7, 8 };
 
         int result[] = reverseArrIngroup(arr, K);
 
