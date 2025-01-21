@@ -7,7 +7,7 @@
 
 import java.util.*;
 
-class Math {
+class MathClass {
     int a;
     int b;
     int c;
@@ -37,7 +37,7 @@ class Math {
     }
 }
 
-class add extends Math {
+class add extends MathClass {
     int total;
 
     public void addition() {

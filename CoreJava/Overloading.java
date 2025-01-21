@@ -11,7 +11,7 @@
 
 import java.util.*;
 
-class Math {
+class MathClass {
     public void display(int a, int b) {
         System.out.println("Addition is : " + (a + b));
     }
@@ -46,7 +46,7 @@ public class Overloading {
             System.out.print("Enter one float number : ");
             float num4 = scanner.nextFloat();
             System.out.println("-------------------------------------------------");
-            Math mt = new Math();
+            MathClass mt = new MathClass();
             mt.display(num1, num2);
             mt.display(num1, num4);
             mt.display();

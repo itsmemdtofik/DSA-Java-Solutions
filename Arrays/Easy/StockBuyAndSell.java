@@ -32,7 +32,7 @@ public class StockBuyAndSell {
 
     public static int stockBuyAndSell(int prices[]){
 
-        if(prices == null || prices.length == 0){
+        if(prices == null || prices.length == 0 || prices.length < 2){
             return 0;
         }
 
@@ -52,18 +52,41 @@ public class StockBuyAndSell {
 
         return maxProfit;
     }
+
+    public static int anotherApproach(int prices[]){
+        if(prices == null || prices.length < 2){
+            return 0;
+        }
+
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for(int price: prices){
+            minPrice = Math.min(minPrice, price);
+            int profit = price - minPrice;
+
+            maxProfit = Math.max(maxProfit, profit);
+        }
+
+        return maxProfit;
+    }
     public static void main(String[] args) {
 
          // Test cases
          int[] prices1 = {7, 1, 5, 3, 6, 4};  // Expected output: 5
          int[] prices2 = {7, 6, 4, 3, 1};     // Expected output: 0
-         int[] prices3 = {1, 2, 3, 4, 5};     // Expected output: 4
+         int[] prices3 = {1, 2, 1,3, 4, 5};     // Expected output: 4
          int[] prices4 = {10, 22, 5, 75, 65, 80};  // Expected output: 75
  
          System.out.println("Max Profit for prices1: " + stockBuyAndSell(prices1));  // 5
          System.out.println("Max Profit for prices2: " + stockBuyAndSell(prices2));  // 0
          System.out.println("Max Profit for prices3: " + stockBuyAndSell(prices3));  // 4
          System.out.println("Max Profit for prices4: " + stockBuyAndSell(prices4));
+
+         System.out.println("Max Profit for prices1: " + anotherApproach(prices1));  // 5
+         System.out.println("Max Profit for prices2: " + anotherApproach(prices2));  // 0
+         System.out.println("Max Profit for prices3: " + anotherApproach(prices3));  // 4
+         System.out.println("Max Profit for prices4: " + anotherApproach(prices4));
 
     }
 }

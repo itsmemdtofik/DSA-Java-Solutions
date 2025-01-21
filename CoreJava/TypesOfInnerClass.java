@@ -10,17 +10,17 @@ Types of Inner Class :
 
 /*(1)Nested Inner Class*/
 
-class Outer{
-	class Inner{
+class OuterClass{
+	class InnerClass{
 		public void Display(){
 			System.out.println("I am Nested Inner Class");
 		}
 	}
 }
 
-class TypesOfInnerClass {
+class TypesOfInner {
 	public static void main(String[] args) {
-		Outer.Inner inner = new Outer().new Inner();
+		OuterClass.InnerClass inner = new OuterClass().new InnerClass();
 		inner.Display();
 	}
 	

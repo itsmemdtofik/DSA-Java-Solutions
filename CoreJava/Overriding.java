@@ -10,7 +10,7 @@
 
 import java.util.*;
 
-class Math {
+class MathClass {
     private int a;
     private int b;
 
@@ -32,7 +32,7 @@ class Math {
     }
 }
 
-class MathOfMath extends Math {
+class MathOfMath extends MathClass {
 
     void add(int a, int b) {
         System.out.println("Addition is : " + (a + b));
