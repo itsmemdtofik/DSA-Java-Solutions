@@ -1,5 +1,3 @@
-package Easy;
-
 /**
  * * Stock Buy and Sell – Max one Transaction Allowed.
  * 
@@ -28,6 +26,7 @@ package Easy;
  * maximum profit by buying at price[0] and selling at price[n-1]
  * 
  */
+package Easy;
 public class StockBuyAndSell {
 
     public static int stockBuyAndSell(int prices[]){

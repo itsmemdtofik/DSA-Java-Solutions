@@ -1,5 +1,3 @@
-package Easy;
-
 /**
  * * Fiding the some of digits of a number until sum become single digit.
  * 
@@ -22,7 +20,7 @@ package Easy;
  * Step 2: 2 + 2 = 4
  * 
  */
-
+package Easy;
  public class RepetitiveAdditionOfDigits {
 
     public static int findSumOfDigit(int arr[]){

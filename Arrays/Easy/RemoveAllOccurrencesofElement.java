@@ -1,5 +1,3 @@
-package Easy;
-
 /**
  * * Remove all occurences of an element in an array.
  * 
@@ -29,6 +27,7 @@ package Easy;
  * element. So, modified arr[] = [0, 1, 3, 0, 4, _, _, _]
  * 
  */
+package Easy;
 public class RemoveAllOccurrencesofElement {
 
     public static int removeAllOccurenceOfElement(int arr[], int element) {

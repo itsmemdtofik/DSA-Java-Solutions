@@ -1,6 +1,3 @@
-package Easy;
-
-import java.util.ArrayList;
 /**
  * * Remove duplicate from sorted array.
  * 
@@ -23,6 +20,10 @@ import java.util.ArrayList;
  * 
  * 
  */
+
+package Easy;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -58,14 +59,14 @@ public class RemoveDuplicate {
         return result;
     }
 
-    public static int removeDuplicateArr(int nums[]){
-        if(nums == null || nums.length < 2){
+    public static int removeDuplicateArr(int nums[]) {
+        if (nums == null || nums.length < 2) {
             return 0;
         }
 
         int j = 1;
-        for(int i = 1; i < nums.length; i++){
-            if(nums[i] != nums[i - 1]){
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[i - 1]) {
                 nums[j] = nums[i];
                 j++;
             }
@@ -115,8 +116,8 @@ public class RemoveDuplicate {
     public static void main(String[] args) {
 
         int arr[] = { 2, 2, 2, 2 };
-        int arr1[] = { 1, 1, 2};
-        int nums[] = {1, 1, 2};
+        int arr1[] = { 1, 1, 2 };
+        int nums[] = { 1, 1, 2 };
         System.out.print("After removing the duplicate in an array: ");
         System.out.println(Arrays.toString(removeDuplicate(arr)));
         System.out.println("Using HashSet: " + Arrays.toString(usingHashSet(arr1)));
@@ -124,7 +125,7 @@ public class RemoveDuplicate {
         System.out.println("Using list: " + Arrays.toString(removingUsingList(arr1)));
 
         int j = removeDuplicateArr(nums);
-        for(int i = 0; i < j; i++){
+        for (int i = 0; i < j; i++) {
             System.out.println(nums[i]);
         }
     }

@@ -1,7 +1,3 @@
-package Medium;
-
-import java.util.Arrays;
-
 /**
  * * Product of an Array Except Self.
  * 
@@ -41,6 +37,11 @@ import java.util.Arrays;
  * result[2] = 8
  * result[3] = 6
  */
+
+package Medium;
+
+import java.util.Arrays;
+
 public class ProductOfArrayExceptSelf {
 
     public static int[] productOfArrayExceptSelf(int arr[]) {
@@ -63,8 +64,8 @@ public class ProductOfArrayExceptSelf {
         return result;
     }
 
-    public static int[] productOfArrayUsingLeftAndRight(int arr[]){
-        if(arr == null){
+    public static int[] productOfArrayUsingLeftAndRight(int arr[]) {
+        if (arr == null) {
             return null;
         }
 
@@ -72,20 +73,22 @@ public class ProductOfArrayExceptSelf {
         int right[] = new int[arr.length];
         int result[] = new int[arr.length];
 
-        //Step1: Calculate the left array. left[0] = 1, left[1] = 1, left[2] = 2, left[3] = 6
+        // Step1: Calculate the left array. left[0] = 1, left[1] = 1, left[2] = 2,
+        // left[3] = 6
         left[0] = 1;
-        for(int i = 1; i < arr.length; i++){
+        for (int i = 1; i < arr.length; i++) {
             left[i] = left[i - 1] * arr[i - 1];
         }
 
-        //Step2: Calculate the right array. right[3] = 1 right[2] = 4, right[1] = 12, right[0] = 24.
+        // Step2: Calculate the right array. right[3] = 1 right[2] = 4, right[1] = 12,
+        // right[0] = 24.
         right[arr.length - 1] = 1;
-        for(int j = arr.length - 2; j >= 0; j--){
+        for (int j = arr.length - 2; j >= 0; j--) {
             right[j] = right[j + 1] * arr[j + 1];
         }
 
-        //Step3: Now multiply with left arr with right array.
-        for(int i = 0; i < arr.length; i++){
+        // Step3: Now multiply with left arr with right array.
+        for (int i = 0; i < arr.length; i++) {
             result[i] = left[i] * right[i];
         }
 
@@ -95,7 +98,7 @@ public class ProductOfArrayExceptSelf {
     public static void main(String[] args) {
 
         int arr[] = { 1, 2, 3, 4 };
-        int arr1[] = {10, 3, 5, 6, 2};
+        int arr1[] = { 10, 3, 5, 6, 2 };
         System.out.print("Product of an array except self element: ");
         System.out.println(Arrays.toString(productOfArrayExceptSelf(arr)));
         System.out.println(Arrays.toString(productOfArrayUsingLeftAndRight(arr1)));

@@ -1,7 +1,3 @@
-package Easy;
-
-import java.util.Arrays;
-
 /**
  * * Wave Array
  * 
@@ -26,31 +22,37 @@ import java.util.Arrays;
  * Output: arr[] = {20, 8, 10, 4, 6, 2}
  * 
  */
+
+package Easy;
+
+import java.util.Arrays;
+
 public class WaveArray {
-    
-    public static int[] waveArray(int arr[]){
-        if(arr.length == 0){
+
+    public static int[] waveArray(int arr[]) {
+        if (arr.length == 0) {
             return arr;
         }
 
         Arrays.sort(arr);
 
-        for(int i = 0; i < arr.length - 1; i += 2){
+        for (int i = 0; i < arr.length - 1; i += 2) {
             int temp = arr[i + 1];
-            arr[i+1] = arr[i];
+            arr[i + 1] = arr[i];
             arr[i] = temp;
         }
 
         return arr;
     }
+
     public static void main(String[] args) {
 
-        int arr[] = {100, 10, 90, 49, 2, 1, 5, 23};
+        int arr[] = { 100, 10, 90, 49, 2, 1, 5, 23 };
 
         int wavearray[] = waveArray(arr);
 
         System.out.print("Wave Array : ");
-        for(int i: wavearray){
+        for (int i : wavearray) {
             System.out.print(i + ", ");
         }
         System.out.println();

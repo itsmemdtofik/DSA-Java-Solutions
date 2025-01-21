@@ -1,7 +1,3 @@
-package Easy;
-
-import java.util.Arrays;
-
 /**
  * * Maximum Consecutive one's or zero in binary array.
  * Given a binary array, find the count of a maximum number of consecutive 1s
@@ -21,6 +17,11 @@ import java.util.Arrays;
  * index 0-1.
  * 
  */
+
+package Easy;
+
+import java.util.Arrays;
+
 public class MaximumConecutiveOne {
 
     public static int maximumconsecutive(int arr[]) {
