@@ -271,6 +271,7 @@
         "keyword.control",
         "keyword.control.conditional",
         "storage.modifier",
+        "keyword.operator",
         "keyword.operator.new",
         "keyword.operator.expression",
         "keyword.begin.blade",
@@ -324,8 +325,8 @@
         "meta.brace",
         "punctuation.definition.parameters",
         "punctuation.definition.template-expression",
-        "keyword.operator",
         "keyword.other",
+        "keyword.operator",
         "punctuation.terminator",
         "punctuation.separator",
         "punctuation.definition.generic.begin",
@@ -357,7 +358,7 @@
         "entity.name.variable.tuple-element.cs"
       ],
       "settings": {
-        "foreground": "#6160a4"
+        "foreground": "#35ddff"
       }
     },
     {

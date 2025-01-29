@@ -211,6 +211,8 @@ class SinglyLinkedList {
         return mergedList;
     }
 
+    
+
     // 16. Remove duplicates
     public void removeDuplicates() {
         Node current = head;
