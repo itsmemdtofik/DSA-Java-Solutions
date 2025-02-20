@@ -208,7 +208,7 @@
         "source.lua"
       ],
       "settings": {
-        "foreground": "#eeeeee"
+        "foreground": "#c2e1fa"
       }
     },
     {
@@ -295,7 +295,7 @@
         "variable.object.property"
       ],
       "settings": {
-        "foreground": "#eeeeee"
+        "foreground": "#c2e1fa"
       }
     },
     {
@@ -447,7 +447,7 @@
         "source.elm constant.type-constructor"
       ],
       "settings": {
-        "foreground": "#eee"
+        "foreground": "#c2e1fa"
       }
     },
     {
